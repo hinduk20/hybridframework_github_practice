@@ -18,11 +18,32 @@ public class LoginPage
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement submitBtn;
 	
-	@FindBy(xpath = "//h5[text()='Login']")
+	@FindBy(xpath =" //h5[normalize-space()='Login']")
 	WebElement loginText;
 	
 	@FindBy(xpath = "//img[@alt='company-branding']")
 	WebElement logoImage;
+	
+	@FindBy(xpath = "//p[text()='Forgot your password? ']")
+	WebElement forgetPass;
+	
+	@FindBy(xpath = "//p[text()='OrangeHRM OS 5.7']")
+	WebElement footerText;
+    
+	@FindBy(linkText = "OrangeHRM OS 5.7")
+	WebElement footerLink;
+	
+	@FindBy(xpath = "//a[@href='https://www.linkedin.com/company/orangehrm/mycompany/']//*[name()='svg']")
+	WebElement linkdinLogo;
+	
+	@FindBy(xpath = "//a[@href='https://www.facebook.com/OrangeHRM/']//*[name()='svg']")
+	WebElement facebookLogo;
+	
+	@FindBy(xpath = "//a[@href='https://twitter.com/orangehrm?lang=en']//*[name()='svg']")
+	WebElement twitterLogo;
+	
+	@FindBy(xpath = "(//*[name()='path'][@class='st0'])[4]")
+	WebElement youTube;
 	
  public LoginPage(WebDriver driver)
  {
@@ -55,5 +76,43 @@ public void logoImgageDisplay()
 	{
 		System.out.println("The image is correctly display");
 	}
+}
+public void forgetPasswordMethod() 
+{
+	if(forgetPass.isEnabled())
+	{
+		forgetPass.click();
+		System.out.println("The forgetpassword link is clickable ");
+	}
+}
+public void footerLinkClick() 
+{
+	if(footerLink.isEnabled()) 
+	{
+		footerLink.click();
+		System.out.println("The link is clickable");
+	}
+}
+public void footerAllLinks() 
+{
+	if(linkdinLogo.isDisplayed()) 
+	{
+		linkdinLogo.click();
+		System.out.println("The linkdinlink is clickable");
+	}
+	if(facebookLogo.isDisplayed()) 
+	{
+		facebookLogo.click();
+		System.err.println("The facebooklink is clickable ");
+	}
+	if(twitterLogo.isDisplayed()) {
+		twitterLogo.click();
+		System.out.println("the twittwer link is display and clickable ");
+	}
+	if(youTube.isDisplayed()) {
+		youTube.click();
+		System.out.println("The youtube link is display and clickable ");
+	}
+	
 }
 }

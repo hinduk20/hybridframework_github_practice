@@ -17,6 +17,10 @@ public class LoginTC extends Base
 	  lp.sumbitBtnClick();
 	  lp.loginTextCheck();
 	  lp.logoImgageDisplay();
+	  lp.footerLinkClick();
+	  lp.forgetPasswordMethod();
+	  lp.footerAllLinks();
+	  
 	  
    }
 }
