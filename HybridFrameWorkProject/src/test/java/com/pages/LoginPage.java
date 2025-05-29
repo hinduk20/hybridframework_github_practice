@@ -18,7 +18,7 @@ public class LoginPage
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement submitBtn;
 	
-	@FindBy(xpath =" //h5[normalize-space()='Login']")
+	@FindBy(tagName = "h5")
 	WebElement loginText;
 	
 	@FindBy(xpath = "//img[@alt='company-branding']")
