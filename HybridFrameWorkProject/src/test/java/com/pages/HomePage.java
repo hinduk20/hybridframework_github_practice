@@ -169,8 +169,6 @@ public class HomePage {
 	public void buzzMethod() {
 		buzz.click();
 	}
-	
-	
 
 	public void upgradeElementMethod() {
 		upgradeElement.click();
@@ -200,10 +198,6 @@ public class HomePage {
 		helpBtnElement.click();
 	}
 
-	public void clickOnAdminMenu() {
-		// TODO Auto-generated method stub
-		admin.click();
-	}
 
 
 }

@@ -24,11 +24,10 @@ public class HomeTC extends Base{
 	@Test
 	public void verifyNavigationToAdminPage() {
 	    Assert.assertTrue(homePage.isAdminMenuDisplayed(), "Admin menu not found");
-	    homePage.clickOnAdminMenu();
+	    homePage.adminMethod();
 	    String currentUrl = driver.getCurrentUrl();
 	    Assert.assertTrue(currentUrl.contains("/admin/viewAdminModule"), "Navigation to Admin page failed. Current URL: " + currentUrl);
 	}
-
 	
 	@Test
 	public void verifyNavigationToPimPage() {
@@ -101,8 +100,5 @@ public class HomeTC extends Base{
 		Assert.assertTrue(driver.getCurrentUrl().contains("buzz"), "Navigation to buzz page failed");
 	
 	}
-		
-	
-		
 		
 	}
