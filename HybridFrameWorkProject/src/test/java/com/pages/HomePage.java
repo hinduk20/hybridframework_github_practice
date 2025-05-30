@@ -133,13 +133,6 @@ public class HomePage {
 		myInfo.click();
 	}
 
-	/*public boolean isPerformance() {
-		return performance.isDisplayed();
-	}
-	public void performanceMethod() {
-		performance.click();
-	}*/
-
 	public boolean isDashboardDisplayed() {
 		return dashboard.isDisplayed();
 	}

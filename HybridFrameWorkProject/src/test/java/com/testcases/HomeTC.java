@@ -9,9 +9,6 @@ import com.pages.LoginPage;
 import com.testbase.Base;
 
 public class HomeTC extends Base{
-	/* LoginPage loginPage = new LoginPage();
-     HomePage homePage = new HomePage();
-     */
 		WebDriver driver;
 	    LoginPage loginPage;
 	    HomePage homePage;
@@ -23,14 +20,6 @@ public class HomeTC extends Base{
        homePage.clickPerformanceMenu();
        Assert.assertTrue(driver.getCurrentUrl().contains("performance"), "Navigation to Performance page failed");
 	}
-	/*
-	@Test
-	public void verifyNavigationToAdminPage() {
-		Assert.assertTrue(homePage.isAdminMenuDisplayed(), "Admin menu not found");
-		homePage.adminMethod();
-		Assert.assertTrue(driver.getCurrentUrl().contains("admin"), "Navigation to admin page failed");
-	}
-	*/
 	
 	@Test
 	public void verifyNavigationToAdminPage() {
