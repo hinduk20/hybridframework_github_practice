@@ -47,6 +47,12 @@ public class PerformancePage {
 	@FindBy(xpath="(//div[@class='oxd-select-text-input'])[1]")
 	WebElement jobTitle;
 	
+	@FindBy(xpath = "//div[text()='Account Assistant']")
+	WebElement accountAssitant;
+	
+	@FindBy(xpath = "//div[text()='Automaton Tester']")
+	WebElement automationTester;
+	
 	@FindBy(xpath="/(//div[@class='oxd-select-text-input'])[2]")
 	WebElement subunit;
 	
@@ -55,6 +61,15 @@ public class PerformancePage {
 	
 	@FindBy(xpath="(//div[@class='oxd-select-text-input'])[4]")
 	WebElement reviewStatus;
+	
+	@FindBy(xpath="//div[text()='Activated']")
+	WebElement Activated;
+	
+	@FindBy(xpath="//div[text()='In Progress']")
+	WebElement inProgress;
+	
+	@FindBy(xpath="//div[text()='Completed']")
+	WebElement completed;
 	
 	@FindBy(xpath="(//input[@placeholder='yyyy-dd-mm'])[1]")
 	WebElement toDate;
@@ -87,6 +102,31 @@ public class PerformancePage {
 	public boolean displayPerformanceTitle() {
 		return performance.isDisplayed();
 	}
+	
+	public void selectJobTitle(String jobTilte) {
+		if(jobTitle.equals("Automation Tester")) {
+			automationTester.click();
+		}
+		else if(jobTitle.equals("Account Assitant")){
+			accountAssitant.click();
+		}
+	}
+	
+	public void selectReviewStatus(String reviewStatus ) {
+		if(reviewStatus.equals("Activated")) {
+			Activated.click();
+		}
+		else if(reviewStatus.equals("In Progress")){
+			inProgress.click();
+		}
+		
+		else if(reviewStatus.equals("Completed")){
+			completed.click();
+		}
+	}
+	
+	
+	
 	
 	
 	
